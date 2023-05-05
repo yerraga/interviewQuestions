@@ -1,0 +1,33 @@
+package Java8Practise;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Test {
+	public static void main(String[] args) {
+		String S1 = "I am from India and I am from Bangalore";
+		printDuplicates(S1);
+		List<String> list = Arrays.asList(S1.split(" "));
+		list.stream().filter(e ->Collections.frequency(list, e)> 1).collect(Collectors.toSet()).forEach(e -> System.out.print(e + " "));
+	}
+	public static void printDuplicates(String str) {
+		str = str.toLowerCase();
+		int count = 0;
+		boolean flag = true;
+		char [] arr = str.toCharArray();
+		for (int i = 0; i < str.length(); i++) {
+			for(int j = 0; j <str.length(); j++) {
+				if (i != j & arr[i] != arr[j] ){
+					flag = false;
+					i++;
+					j++;
+				}
+				if(flag) {
+					System.out.println(arr[i] + count);
+				}
+			}
+		}
+	}
+}

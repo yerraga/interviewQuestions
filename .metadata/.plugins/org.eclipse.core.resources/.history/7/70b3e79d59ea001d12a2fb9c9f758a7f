@@ -1,0 +1,12 @@
+package Example;
+
+public class Test {
+	public static void main(String[] args) {
+		System.out.println(check("Sunil"));
+	}
+	  public static boolean check(String name){
+	        if(name.equalsIgnoreCase("Ganesh"))
+	            return true;
+	        else return false;
+	    }
+}

@@ -1,0 +1,20 @@
+
+public class Test {
+	public static void main(String[] args) {
+		String S1 = "I am from India and I am from Bangalore";
+		printDuplicates(S1);
+	}
+	public static void printDuplicates(String str) {
+		str = str.toLowerCase();
+		int count = 0;
+		boolean flag = true;
+		char [] arr = str.toCharArray();
+		for (int i = 0; i < str.length(); i++) {
+			for(int j = 0; j <str.length(); j++) {
+				if (i != j & arr[i] == arr[j] ){
+					System.out.println(arr[j]);
+				}
+			}
+		}
+	}
+}

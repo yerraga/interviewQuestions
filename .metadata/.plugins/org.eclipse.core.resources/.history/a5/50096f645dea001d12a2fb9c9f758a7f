@@ -1,0 +1,39 @@
+package Example;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class Test {
+	public static void main(String[] args) {
+	System.out.println(stringAnagram("Matt", "Army"));
+	}
+	public static boolean stringAnagram(String str1, String str2) {
+		str1 = str1.toLowerCase();
+		str2 = str2.toLowerCase();
+		char[] arr = str1.toCharArray();
+		char [] arr1 = str2.toCharArray();
+		// need iterate elements in string;
+		for (int i = 0; i < str1.length(); i++) {
+			for (int j = 0; j < str2.length(); j++) {
+				if (arr[i] == arr[j]) {
+				 return true;
+				}
+				else {
+					i++;
+					j++;
+				}
+			}
+		}
+		
+		return false;
+		
+	}
+}
+//Write a Java8 program to find only duplicate elements with its count
+//from the String ArrayList ? InputArr=["AB", "BB", "AA", "AB", "ABC"]
+ //Write a java program to validate given two strings are anagram (or) not.
+// str1: “Mary”, str2: “Army”
