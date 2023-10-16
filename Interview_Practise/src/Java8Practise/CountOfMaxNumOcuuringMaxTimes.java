@@ -8,7 +8,7 @@ public class CountOfMaxNumOcuuringMaxTimes {
 	public static void main(String[] args) {
 		
 	}
-
+// this code not returning correct values modify this file
 	    public int solution(int[] A) {
 	        Map <Integer, Integer> frequencyMap = new HashMap<>();
 	        for (int num : A){
