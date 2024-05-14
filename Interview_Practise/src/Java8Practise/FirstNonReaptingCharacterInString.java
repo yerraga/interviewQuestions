@@ -10,7 +10,7 @@ public class FirstNonReaptingCharacterInString {
 		String str = "i love java and java welcomes you";
 		List <String> list = Arrays.asList(str.split(""));
 		
-		String firstUniqueElement = list.stream().filter(e -> Collections.frequency(list, e) == 1).findFirst().orElse(null);
+		String firstUniqueElement = list.stream().filter(e -> !e.equals(" ")).filter(e -> Collections.frequency(list, e) > 1).findFirst().orElse(null);
 		System.out.println(firstUniqueElement);
 	
 		String str1 = "Ganesh";

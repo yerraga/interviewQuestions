@@ -24,7 +24,7 @@ public class CountDuplicates {
 				}
 				if (count > 1) {
 					System.out.println(arr [i] + " -> "+ count);
-					//i= i + (count - 1);
+					i= i + (count - 1);
 				}
 			}
 		}
