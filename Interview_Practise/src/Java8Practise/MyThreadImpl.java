@@ -1,4 +1,4 @@
-package Practise;
+package Java8Practise;
 
 public class MyThreadImpl {
 	public static void main(String[] args) {
