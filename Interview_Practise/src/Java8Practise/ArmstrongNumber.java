@@ -1,46 +1,50 @@
 package Java8Practise;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 public class ArmstrongNumber {
-	
+
 	public static void main(String[] args) {
-        int number = 153; // Change this number to check for other values
+		int num = 163;
+		if (isArmstrongNumber(num)) {
+			System.out.println(num + " : is Armstrong number");
+		} else {
+			System.out.println(num + " : is not Armstrong number");
+		}
+	}
 
-        if (isArmstrong(number)) {
-            System.out.println(number + " is an Armstrong number.");
-        } else {
-            System.out.println(number + " is not an Armstrong number.");
-        }
-    }
+	public static boolean isArmstrongNumber(int num) {
+		int n = countDigits(num);
+		if (num != calculateNumwithPower(num, n)) {
+			return false;
+		}
+		return true;
+	}
 
-    // Function to check if a number is an Armstrong number
-    public static boolean isArmstrong(int num) {
-        int originalNum, remainder, result = 0;
-        int n = 0;
+	public static int countDigits(int num) {
+		int n = 0;
+		while (num != 0) {
+			num = num / 10;
+			n++;
+		}
+		return n;
+	}
 
-        originalNum = num;
-
-        // Count the number of digits
-        while (originalNum != 0) {
-            originalNum /= 10;
-            n++;
-        }
-
-        originalNum = num;
-
-        // Calculate the result
-        while (originalNum != 0) {
-            remainder = originalNum % 10;
-            result += Math.pow(remainder, n);
-            originalNum /= 10;
-        }
-
-        // Check if the result is equal to the original number
-        return result == num;
-    }
+	public static int calculateNumwithPower(int num, int n) {
+		int result = 0;
+		while (num != 0) {
+			result +=calculatePower(n, num);
+			num = num / 10;
+		}
+		return result;
+	}
 	
+	public static int calculatePower(int n, int num) {
+		int number = 1;
+		int reminder = num%10;
+		while (n !=0) {
+			number *= reminder;
+			n--;
+		}
+		return number;
+	}
 
 }
-
