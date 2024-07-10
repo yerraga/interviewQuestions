@@ -1,4 +1,4 @@
-package Practise;
+package Java8Practise;
 
 public class ReversingStringAndRemovingDuplicates {
 	public static void main(String[] args) {
