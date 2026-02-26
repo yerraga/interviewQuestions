@@ -1,8 +1,0 @@
-package Java8Practise;
-
-public class PrintEvenNumbersFromStringNumbers {
-	public static void main(String[] args) {
-		
-		}
-	
-}
